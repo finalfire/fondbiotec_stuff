@@ -1,9 +1,8 @@
 # Alcuni errori comuni in Python
 
-- Lista degli errori
-  * [Errori su variabili e funzioni non definite](#errori-su-variabili-e-funzioni-non-definite)
-  * [Errori con gli indici](#errori-con-gli-indici)
-  * [Errori di indentazione](#errori-di-indentazione)
+* [Errori su variabili e funzioni non definite](#errori-su-variabili-e-funzioni-non-definite)
+* [Errori con gli indici](#errori-con-gli-indici)
+* [Errori di indentazione](#errori-di-indentazione)
 
 ## Errori su variabili e funzioni non definite
 
