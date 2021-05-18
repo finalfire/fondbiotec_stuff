@@ -58,3 +58,14 @@ Il seguente codice mostra un costrutto `if` in cui la seconda istruzione nel cor
              ^
 IndentationError: unindent does not match any outer indentation level
 ```
+
+**Attenzione**: una indentazione corretta non è mai un errore sintattico, ma a volte può essere la cartina al tornasole di un errore semantico. Un esempio classico è un ciclo `while` la cui condizione controlla se il valore di una variabile `i` è minore di un certo numero `n`:
+
+```python
+i = 0
+while i < n:
+    print(i)
+i = i + 1
+```
+
+Questo codice è *sintatticamente corretto*. Seppur corretto, il codice risulta in un ciclo infinito, poiché la variabile `i` deve essere aggiornata all'interno del corpo del ciclo: in questo caso, invece, essa viene aggiornata al di fuori del ciclo, il quale non terminerà mai (perché il valore di `i` sarà sempre pari a `0`). Per fixare questo codice, basta indentare correttamente l'ultima riga all'interno del corpo del ciclo `while`.
