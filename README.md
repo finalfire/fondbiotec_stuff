@@ -1,8 +1,10 @@
 # Alcuni errori comuni in Python
 
-* [Errori su variabili e funzioni non definite](#errori-su-variabili-e-funzioni-non-definite)
-* [Errori con gli indici](#errori-con-gli-indici)
-* [Errori di indentazione](#errori-di-indentazione)
+- Indice
+  * [Errori su variabili e funzioni non definite](#errori-su-variabili-e-funzioni-non-definite)
+  * [Errori con gli indici](#errori-con-gli-indici)
+  * [Errori di indentazione](#errori-di-indentazione)
+  * [Errori di sintassi](#errori-di-sintassi)
 
 ## Errori su variabili e funzioni non definite
 
@@ -19,7 +21,9 @@ NameError: name 'my_ar' is not defined
 
 ## Errori con gli indici
 
-Per una lista con lunghezza `n` gli indici degli elementi vanno sempre da `0` a `n-1`, e sono detti **indici validi**. Questo vale per tutte le liste. Se proviamo ad accedere ad una lista con degli indici più grandi di `n-1` otterremo un `IndexError`. Il codice seguente itera su di una lista con un ciclo while. La sua condizione indica però `i <= len(l)`: questo significa che `i`, ad un certo punto, sarà uguale a `len(l)`, che non è un indice valido per la lista.
+Per una lista con lunghezza `n` gli indici degli elementi vanno sempre da `0` a `n-1`, e sono detti **indici validi**. Questo vale per tutte le liste. Se proviamo ad accedere ad una lista con degli indici più grandi di `n-1` otterremo un `IndexError`.
+
+Il codice seguente itera su di una lista con un ciclo while. La sua condizione indica però `i <= len(l)`: questo significa che `i`, ad un certo punto, sarà uguale a `len(l)`, che non è un indice valido per la lista.
 
 ```python
 >>> i = 0
@@ -68,3 +72,11 @@ i = i + 1
 ```
 
 Questo codice è *sintatticamente corretto*. Seppur corretto, il codice risulta in un ciclo infinito, poiché la variabile `i` deve essere aggiornata all'interno del corpo del ciclo: in questo caso, invece, essa viene aggiornata al di fuori del ciclo, il quale non terminerà mai (perché il valore di `i` sarà sempre pari a `0`). Per fixare questo codice, basta indentare correttamente l'ultima riga all'interno del corpo del ciclo `while`.
+
+## Errori di sintassi
+
+Gli errori di sintassi si hanno quando la sintassi di una o più righe del programma è errata: quando accade, si ha un `SyntaxError`. I casi in cui si hanno errori di sintassi sono molteplici, tra cui:
+
+* l'utilizzo di una stringa senza il corretto impiego degli apici, singole o doppie (es, `x = "Hello` è un errore di sintassi),
+* il dimenticarsi di inserire i due punti subito dopo un costrutto `if`, `while`, `for` oppure `def` (es, `if x > 42` è un errore di sintassi),
+* aver un numero differente di parentesi aperte e chiuse in una espressione (es, `x = (42 + (5 * 2)` è un errore di sintassi)
